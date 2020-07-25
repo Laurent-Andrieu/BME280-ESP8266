@@ -7,9 +7,9 @@ import ubinascii
 from umqttsimple import MQTTClient
 
 
-SSID = 'Livebox-0270'
+SSID = ''
 PASS = ''
-mqtt_broker = '192.168.1.100'
+mqtt_broker = ''
 
 version = [str(i)  for i in sys.implementation.version]
 wlan = network.WLAN(network.STA_IF)
