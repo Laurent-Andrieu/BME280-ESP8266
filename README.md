@@ -66,7 +66,7 @@ Le BME280 à la particularité de pouvoir communiquer en SPI ou en I²C. La comm
 # Fonctionnement du programme:
 ### boot.py
 Le programme étant géré par le firmware µPython, il va chercher à lire premièrement le fichier nommé explictement `boot.py`.
-Le module boot connecte l'ESP8266 en Wi-Fi puis au broker MQTT du réseau local en non crypté sans identifiants. Il envoie les informations du module(mémoire, version, nom, id, configuration IP..).
+Le module boot connecte l'ESP8266 en Wi-Fi puis au broker MQTT du réseau local sans chiffrement ni identifiants. Il envoie les informations du module(mémoire, version, nom, id, configuration IP..).
 ### main.py
 Le module est importé par le module boot.py et appelé à la fi nde son execution. Les variables et modules importés depuis le fichier boot.py sont éffacés à la fin de son execution. On rappelle alors les modules nécessaires.
 
