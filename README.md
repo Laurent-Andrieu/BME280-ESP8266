@@ -77,3 +77,11 @@ Une fois tout celà terminé, débranchez la connection de l'alarme (Pin D0) pui
 Vous pourrez à tout moment re-upload un nouveau code de la même façon, sinon connectez vous en UART, appyuez sur **RST** puis à l'aide de l'IDE Thony, envoyer un ou plusieurs 'break' avec 'Ctrl + F2'.
 
 À partir de là vous pourrez réactiver le webREPL et remodifier le code.
+
+---
+
+# Installation du package Node-red:
+Une fois téléchargé depuis le ![repo](npm install @laurent-andrieu/bme280-esp8266@0.0.1), décompréssez le: `tar -xzf bme280-esp8266-0.0.1-npm` à la racine de votre dossier Node-Red (~/.node-red/).
+
+# Base de donnés:
+Une fois la base de donnée installée, importez la base '![capteur](https://github.com/Laurent-Andrieu/BME280-ESP8266/tree/master/database)'.
