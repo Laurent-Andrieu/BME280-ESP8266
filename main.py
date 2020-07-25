@@ -73,7 +73,7 @@ while True:
         print('Temperature: ', temp)
         print('Humidity: ', hum)
         print('Pressure: ', pres)
-        #10min pause
+        # 5min pause
         time.sleep(10)
         deep_sleep(300000)
     except OSError as e:
