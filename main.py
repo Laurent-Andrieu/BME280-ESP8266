@@ -8,7 +8,7 @@ from umqttsimple import MQTTClient
 from sys import version, platform, implementation
 
 wlan = network.WLAN(network.STA_IF)
-mqtt_broker = '192.168.1.100'
+mqtt_broker = ''
 client_id = hexlify(machine.unique_id())
 client_id = client_id.decode('utf-8')
 topic = b'sensor/{}'.format(client_id)
@@ -73,7 +73,7 @@ while True:
         print('Temperature: ', temp)
         print('Humidity: ', hum)
         print('Pressure: ', pres)
-        #5min pause
+        #10min pause
         time.sleep(10)
         deep_sleep(300000)
     except OSError as e:
