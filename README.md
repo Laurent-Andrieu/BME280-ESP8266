@@ -72,3 +72,8 @@ Le module est importé par le module boot.py et appelé à la fi nde son executi
 
 Il permet der se connecter en Wi-Fi et au broker MQTT puis d'y envoyer les données sur la température, la pression atmosphérique et l'humidité demandés au BME280. Il passe alors en mode _deep-sleep_ pendant 5 minutes et reprends son cycle en redémarrant.
 
+# Dernier point:
+Une fois tout celà terminé, débranchez la connection de l'alarme (Pin D0) puis redémarrez le module avec le bouton **RST**, rebranchez l'alarme.
+Vous pourrez à tout moment re-upload un nouveau code de la même façon, sinon connectez vous en UART, appyuez sur **RST** puis à l'aide de l'IDE Thony, envoyer un ou plusieurs 'break' avec 'Ctrl + F2'.
+
+À partir de là vous pourrez réactiver le webREPL et remodifier le code.
