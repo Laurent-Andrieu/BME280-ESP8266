@@ -72,7 +72,7 @@ Le module est importé par le module boot.py et appelé à la fi nde son executi
 
 Il permet der se connecter en Wi-Fi et au broker MQTT puis d'y envoyer les données sur la température, la pression atmosphérique et l'humidité demandés au BME280. Il passe alors en mode _deep-sleep_ pendant 5 minutes et reprends son cycle en redémarrant.
 
-# Dernier point:
+## Dernier point:
 Une fois tout celà terminé, débranchez la connection de l'alarme (Pin D0) puis redémarrez le module avec le bouton **RST**, rebranchez l'alarme.
 Vous pourrez à tout moment re-upload un nouveau code de la même façon, sinon connectez vous en UART, appyuez sur **RST** puis à l'aide de l'IDE Thony, envoyer un ou plusieurs 'break' avec 'Ctrl + F2'.
 
@@ -80,8 +80,44 @@ Vous pourrez à tout moment re-upload un nouveau code de la même façon, sinon 
 
 ---
 
-# Installation du package Node-red:
+## Installation du package Node-red:
 Une fois téléchargé depuis le ![repo](https://github.com/Laurent-Andrieu/BME280-ESP8266/packages/329039), décompréssez le: `tar -zxvf bme280-esp8266-0.0.1-npm.tgz` à la racine de votre dossier Node-Red (~/.node-red/).
 
-# Base de donnés:
+## Base de donnés:
 Une fois la base de donnée installée, importez la base '![capteur](https://github.com/Laurent-Andrieu/BME280-ESP8266/tree/master/database)'.
+
+---
+
+## _[Info supplémentaire](https://github.com/Laurent-Andrieu/BME280-ESP8266#info-supplémentaire)_
+Le programme présent consomme au total 14.12mA/h sous 5v.
+Si vous désirez changer le code et le temps en mode **Deep-sleep**, prévoyez de remesurer la consommation.
+### Calcul consommation:
+- Déterminer les différentes quantités de courant consommées et leur durée.
+- Déterminer le nombre de cycle / heure.
+- Multiplier le nombre de cycle/heure par le temps de consommation.
+- Diviser ce produit par 1 heure sur même base de temps.
+- Multiplier la valeur de courant par ce résultat.
+- Recommencer pour chaque valeur de courant différente
+- Faire la somme.
+
+__[Boot]__:20mA/4s toute les 5 mins. Soit 12 fois/heure.
+
+12x4 = 48s/h <=> 48s/1h = 48/3600 = 0.013h
+
+20mAx0.013h = 0.26mA/h
+
+__[Main]__:82mA/17s //
+
+12x17 = 204s/1h = 204/3600 = 0.056h
+
+82mAx0.056h = 4.64mA/h
+
+__[Deep-sleep]__:9.92mA/5min //
+
+12x5 = 60min/h; 60min - (17s+4s) = 55.8min/h
+
+55.8min/60min = 0.93h
+
+9.92mAx0.93h = 9.22mA/h.
+
+__Total__:14.12mA/h.
