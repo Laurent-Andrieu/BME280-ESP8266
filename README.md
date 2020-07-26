@@ -33,13 +33,13 @@ Vous pouvez modifier le code comme bon vous semble.
 
 ## Modification du code:
 Vous devez impérativement modifier les fichiers [boot.py](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/boot.py):
-* SSID:   ssid Wi-Fi
-* PASS:   clé wpa2
-* mqtt_broker:    adresse ipv4
+* [SSID](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/boot.py#L10):   ssid Wi-Fi
+* [PASS](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/boot.py#L11):   clé wpa2
+* [mqtt_broker](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/boot.py#L12):    adresse ipv4
 
 Ainsi que le fichier [main.py](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/main.py)
 
-* mqtt_broker:    adresse_ipv4
+* [mqtt_broker](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/main.py#L11):    adresse_ipv4
 
 _éventuellement les topics dans lesquels vous souhaitez écrite ansi que les données à envoyer_
 
