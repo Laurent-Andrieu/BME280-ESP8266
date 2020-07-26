@@ -103,13 +103,13 @@ Si vous désirez changer le code et le temps en mode **Deep-sleep**, prévoyez d
 - Recommencer pour chaque valeur de courant différente
 - Faire la somme.
 
-__[Boot]__:20mA/4s toute les 5 mins. Soit 12 fois/heure.
+__[]__:20mA/4s toute les 5 mins. Soit 12 fois/heure.
 
 12x4 = 48s/h <=> 48s/1h = 48/3600 = 0.013h
 
 20mAx0.013h = 0.26mA/h
 
-__[Main]__:82mA/17s //
+__[]__:82mA/17s //
 
 12x17 = 204s/1h = 204/3600 = 0.056h
 
