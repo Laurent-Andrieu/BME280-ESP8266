@@ -14,14 +14,14 @@ Pour faire fonctionner le système de manière locale il vous faudra simplement:
 * BME280
 * Serveur ou Raspberry Pi
 ### Logiciel:
-* ![Thony (IDE)](https://thonny.org/) / [MobaXterm](https://mobaxterm.mobatek.net/download.html)_(optionel)_
-* ![Python](https://www.python.org/)
-  * ![pip](https://pypi.org/project/pip/)
-  * ![mpy-cross](https://pypi.org/project/mpy-cross/): `pip install mpy-cross`
-  * ![esptools](https://github.com/espressif/esptool/)
-* ![Node-red](https://nodered.org/docs/getting-started/local)
-* ![LAMP server](https://pimylifeup.com/raspberry-pi-phpmyadmin/)
-* ![Git](https://git-scm.com/)
+* [Thony (IDE)](https://thonny.org/) / [MobaXterm](https://mobaxterm.mobatek.net/download.html)_(optionel)_
+* [Python](https://www.python.org/)
+  * [pip](https://pypi.org/project/pip/)
+  * [mpy-cross](https://pypi.org/project/mpy-cross/): `pip install mpy-cross`
+  * [esptools](https://github.com/espressif/esptool/)
+* [Node-red](https://nodered.org/docs/getting-started/local)
+* [LAMP server](https://pimylifeup.com/raspberry-pi-phpmyadmin/)
+* [Git](https://git-scm.com/)
 ### Code et packages:
 Une fois le serveur mis en place, téléchargez le code source en téléchargeant [ce repository](https://github.com/Laurent-Andrieu/BME280-ESP8266) ainsi que le [package node-red](https://github.com/Laurent-Andrieu/BME280-ESP8266/packages/329039).
 Téléchargez le [firmware micropython](https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#getting-the-firmware).
@@ -32,12 +32,12 @@ Vous pouvez modifier le code comme bon vous semble.
 ---
 
 ## Modification du code:
-Vous devez impérativement modifier les fichiers ![boot.py](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/boot.py):
+Vous devez impérativement modifier les fichiers [boot.py](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/boot.py):
 * SSID:   ssid Wi-Fi
 * PASS:   clé wpa2
 * mqtt_broker:    adresse ipv4
 
-Ainsi que le fichier ![main.py](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/main.py)
+Ainsi que le fichier [main.py](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/main.py)
 
 * mqtt_broker:    adresse_ipv4
 
@@ -51,10 +51,10 @@ Une fois terminé, il faut le compiler à l'aide de **mpy-cross**:`python -m mpy
 Faites ça pour tous les fichiers excepté `boot.py`.
 
 ## Implémentation du code:
-À l'aide des IDE comme Thony ou de quelconque logiciel de communication UART, flashez le firmware précedement téléchargé: ![Deploying the firmware](https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware).
+À l'aide des IDE comme Thony ou de quelconque logiciel de communication UART, flashez le firmware précedement téléchargé: [Deploying the firmware](https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware).
 
 Une fois connecté en UART au REPL du module ESP8266, faites: `import webrepl_setup`. Suivez les instructions du `help()` afin de mettre un mot de passe WebREPL et d'établir la première connexion Wi-fi.
-Puis démarrez le ![WebREPL](http://micropython.org/webrepl/#192.168.1.99:8266/), changez l'adresse avec celle du module. À présent vous pouvez vous y connecter et lui envoyer les fichiers _boot.py_, _main.mpy_, _BME8200.mpy_, _umqttsimple.mpy_.
+Puis démarrez le [WebREPL](http://micropython.org/webrepl/#192.168.1.99:8266/), changez l'adresse avec celle du module. À présent vous pouvez vous y connecter et lui envoyer les fichiers _boot.py_, _main.mpy_, _BME8200.mpy_, _umqttsimple.mpy_.
 
 ## Raccordement du BME280:
 Le BME280 à la particularité de pouvoir communiquer en SPI ou en I²C. La communication se fera en I²C. Pour celà, il faut brancher les Pins de manière suivante:
@@ -84,10 +84,10 @@ Vous pourrez à tout moment re-upload un nouveau code de la même façon, sinon 
 ---
 
 ## Installation du package Node-red:
-Une fois téléchargé depuis le ![repo](https://github.com/Laurent-Andrieu/BME280-ESP8266/packages/329039), décompréssez le: `tar -zxvf bme280-esp8266-0.0.1-npm.tgz` à la racine de votre dossier Node-Red (~/.node-red/).
+Une fois téléchargé depuis le [repo](https://github.com/Laurent-Andrieu/BME280-ESP8266/packages/329039), décompréssez le: `tar -zxvf bme280-esp8266-0.0.1-npm.tgz` à la racine de votre dossier Node-Red (~/.node-red/).
 
 ## Base de donnés:
-Une fois la base de donnée installée, importez la base '![capteur](https://github.com/Laurent-Andrieu/BME280-ESP8266/tree/master/database)'.
+Une fois la base de donnée installée, importez la base '[capteur](https://github.com/Laurent-Andrieu/BME280-ESP8266/tree/master/database)'.
 
 ---
 
