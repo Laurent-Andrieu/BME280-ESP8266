@@ -51,7 +51,7 @@ Une fois terminé, il faut le compiler à l'aide de **mpy-cross**:`python -m mpy
 Faites ça pour tous les fichiers excepté `boot.py`.
 
 ## Implémentation du code:
-À l'aide des IDE comme Thony ou de quelconque logiciel de communication UART, flashez le firmware précedement téléchargé: [Deploying the firmware](https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware).
+'Téléversez' le firmware précedement téléchargé: [Deploying the firmware](https://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware).
 
 Une fois connecté en UART au REPL du module ESP8266, faites: `import webrepl_setup`. Suivez les instructions du `help()` afin de mettre un mot de passe WebREPL et d'établir la première connexion Wi-fi.
 Puis démarrez le [WebREPL](http://micropython.org/webrepl/#192.168.1.99:8266/), changez l'adresse avec celle du module. À présent vous pouvez vous y connecter et lui envoyer les fichiers _boot.py_, _main.mpy_, _BME8200.mpy_, _umqttsimple.mpy_.
