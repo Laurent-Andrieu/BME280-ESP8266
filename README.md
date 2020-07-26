@@ -36,7 +36,9 @@ Vous devez impérativement modifier les fichiers ![boot.py](https://github.com/L
 * SSID:   ssid Wi-Fi
 * PASS:   clé wpa2
 * mqtt_broker:    adresse ipv4
+
 Ainsi que le fichier ![main.py](https://github.com/Laurent-Andrieu/BME280-ESP8266/blob/master/main.py)
+
 * mqtt_broker:    adresse_ipv4
 * _éventuellement les topics dans lesquels vous souhaitez écrite ansi que les données à envoyer_
 
