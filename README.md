@@ -1,10 +1,11 @@
 # [BME280-ESP8266](https://github.com/Laurent-Andrieu/BME280-ESP8266#bme280-esp8266)
 Administration web de données mesurées par le BME280 connecté à un ESP8266 sur MicroPython sur Rapsberry pi.
+
 ![Dashboard](/images/SC.png)
 ![Historique](/images/SC2.png)
 
 ---
-
+Orginal code author : https://randomnerdtutorials.com/micropython-mqtt-esp32-esp8266/.
 ## Logiciels & Dépendances
 Le projet est basé sur un Rapsberri pi 4 avec Php, MariaDB, PhpmyAdmin, apache2...
 Pour faire fonctionner le système de manière locale il vous faudra simplement:
