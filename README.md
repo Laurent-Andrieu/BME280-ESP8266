@@ -74,7 +74,7 @@ Le module boot connecte l'ESP8266 en Wi-Fi puis au broker MQTT du réseau local 
 ### main.py
 Le module est importé par le module boot.py et appelé à la fin de son execution. Les variables et modules importés depuis le fichier boot.py sont éffacés à la fin de son execution. On rappelle alors les modules nécessaires.
 
-Il permet de se connecter en Wi-Fi et au broker MQTT puis d'y envoyer les données sur la température, la pression atmosphérique et l'humidité demandés au BME280. Il passe alors en mode _deep-sleep_ pendant 5 minutes et reprends son cycle en redémarrant.
+Il permet de se connecter en Wi-Fi et au broker MQTT puis d'y envoyer les données sur la température, la pression atmosphérique et l'humidité demandés au BME280. Il passe alors en mode _deep-sleep_ pendant 5 minutes et reprend son cycle en redémarrant.
 
 ## Dernier point:
 Une fois tout celà terminé, débranchez la connection de l'alarme (Pin D0) puis redémarrez le module avec le bouton **RST**, rebranchez l'alarme ou bien débranchez l'alimentation puis rebranchez la à nouveau.
