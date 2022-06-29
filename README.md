@@ -85,7 +85,7 @@ Vous pourrez à tout moment re-upload un nouveau code de la même façon, sinon 
 ---
 
 ## Installation du package Node-red:
-Une fois téléchargé depuis le [repo](https://github.com/Laurent-Andrieu/BME280-ESP8266/packages/329039), décompréssez le: `tar -zxvf bme280-esp8266-0.0.1-npm.tgz` à la racine de votre dossier Node-Red (~/.node-red/).
+Une fois téléchargé depuis le [repo](https://github.com/Laurent-Andrieu/BME280-ESP8266/packages/346911), décompréssez le: `tar -zxvf bme280-esp8266-0.0.1-npm.tgz` à la racine de votre dossier Node-Red (~/.node-red/).
 
 ## Base de donnés:
 Une fois la base de donnée installée, importez la base '[capteur](https://github.com/Laurent-Andrieu/BME280-ESP8266/tree/master/database)'.
